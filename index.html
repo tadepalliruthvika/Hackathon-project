@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kernel Panic - Waste Reporting</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+  <h1>Kernel Panic - Waste Reporting</h1>
+
+  <!-- Report Form -->
+  <form id="reportForm">
+    <label>Severity:</label>
+    <select id="severity">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+    <input type="file" id="photo"/>
+    <button type="submit">Report Spot</button>
+  </form>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <h3>Status Dashboard</h3>
+    <p id="total">Total Reported: 0</p>
+    <p id="inProgress">In Progress: 0</p>
+    <p id="cleaned">Cleaned: 0</p>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Firebase + Firestore + Storage -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
